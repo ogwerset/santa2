@@ -1,0 +1,120 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Open Sans', sans-serif; /* More professional font */
+    background-color: #f0f0f0; /* Light grey for a neutral background */
+    color: #333; /* Dark grey for readability */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Animated text styling */
+.animated-text {
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+/* Keyframes for glow animation */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #eba834, 0 0 20px #eba834, 0 0 30px #D91E41;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6;
+    }
+}
+
+/* Modal styling */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+}
+
+.modal-content {
+    background-color: rgba(110, 99, 115, 0.9); /* Semi-transparent */
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* Close button styling */
+.close {
+    color: #6E6373;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #6E6373;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Slot pair styling */
+.slot-pair {
+    background-color: #7ABF7F; /* Festive green */
+    margin: 5px;
+    padding: 5px;
+    border-radius: 2px;
+    border: 1px solid #000;
+}
+
+/* Slot styling */
+.slot {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    width: calc(50% - 10px);
+    font-weight: bold;
+    color: #D93A2B; /* Festive red */
+    cursor: pointer;
+}
+
+.slot:hover {
+    background-color: rgba(204, 255, 204, 0.9); /* Light green on hover */
+}
+
+.slot-taken {
+    filter: blur(5px);
+}
+
+/* Admin button styling */
+.admin-button {
+    background-color: #d33; /* Festive red */
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+    }
+
+    .slot, .admin-button {
+        width: 100%; /* Full width for better mobile interaction */
+        margin: 5px 0; /* Adjust margin for mobile */
+    }
+}
